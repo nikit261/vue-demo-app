@@ -15,8 +15,8 @@ pipeline {
                
         stage('Deploying to Apache') {
             steps {
-                    sh "cp -rf dist/* /var/www/html/VueProject/dist"
-                    sh "sudo systemctl restart httpd"
+                    sh "sudo cp -rf dist/* /var/www/html/VueProject/dist"
+                    sh " sudo systemctl restart apache2"
             }
         }
     }
